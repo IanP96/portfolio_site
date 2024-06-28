@@ -1,0 +1,292 @@
+* {
+    /* Override user agent margins/padding */
+    margin: 0;
+    padding: 0;
+
+    /* Text appearance */
+    color: white;
+    font-family: monospace;
+}
+
+:root {
+    /* Colours */
+    --light-blue: #64b3df;
+    --dark-blue: #202080;
+    --bg-grey: #282828;
+    --light-grey: #2e2e2e;
+    --footer-grey: #181818;
+    --red: #e95858;
+
+    /* Sizes */
+    --footer-btn-size: 60px;
+}
+
+/* Nav bar */
+
+nav {
+    font-size: 1.4rem;
+    width: 100%;
+    background-color: var(--bg-grey);
+
+    /* Fixed at top */
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* Get rid of bullets */
+    list-style-type: none;
+}
+
+nav li {
+    border: 0.2px solid black;
+    width: 100%;
+    height: 100%;
+}
+
+nav a {
+    color: white;
+    padding: 6px 6px;
+
+    /* No link underline */
+    text-decoration: none;
+
+    /* Fill container */
+    width: 100%;
+    height: 100%;
+
+    /* Centre text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: var(--light-blue);
+    font-weight: bold;
+}
+
+nav.hidden .nav-item {
+    /* Hide links */
+    display: none;
+}
+
+nav.visible .nav-item {
+    /* Show links */
+    display: initial;
+}
+
+/* Body */
+
+body {
+    background-color: var(--bg-grey);
+}
+
+section,
+footer {
+    padding: 8vw;
+
+    /* Centre content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title section image */
+section:nth-child(1) img {
+    aspect-ratio: 1 / 1;
+    /* Stop weird image stretching */
+    object-fit: cover;
+    width: 22rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Title section span */
+section:nth-child(1) span {
+    color: var(--red);
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+}
+
+h1,
+h2,
+p,
+img,
+button {
+    margin: 1rem;
+    line-height: 1.4;
+}
+
+/* Text sizing */
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+p,
+li,
+button,
+label,
+input,
+textarea {
+    font-size: 1.4rem;
+}
+p.title-secondary {
+    font-size: 2rem;
+}
+
+textarea,
+input,
+button {
+    padding: 10px;
+}
+
+textarea,
+input[type="email"],
+input[type="text"] {
+    /* Make text not white so one can read it */
+    color: initial;
+}
+
+img {
+    width: 12rem;
+    max-width: 80vw;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* Prevent image stretching */
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    background-color: var(--light-blue);
+    border-radius: 10px;
+}
+
+.blue-on-hover {
+    transition: background-color 0.08s linear;
+    background-color: var(--light-blue);
+}
+
+.blue-on-hover:hover {
+    background-color: var(--dark-blue);
+}
+
+footer {
+    background-color: var(--footer-grey);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 2rem;
+}
+
+/* Copyright message */
+footer p {
+    /* I want this message to be on the left but justify-self doesn't work for  some reason, hence the following */
+    margin-right: auto;
+}
+
+footer a {
+    display: block;
+    width: var(--footer-btn-size);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0;
+    padding: 0;
+
+    border-radius: calc(var(--footer-btn-size) / 2);
+
+    /* Center button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer button {
+    margin: 0;
+    padding: calc(var(--footer-btn-size) / 5);
+    width: 100%;
+    height: 100%;
+    border-radius: calc(var(--footer-btn-size) / 2);
+
+    /* Center image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+@media screen and (min-width: 700px) {
+    /* Tablet */
+
+    /* Navbar */
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav li {
+        border: none;
+        padding: 1rem;
+    }
+    nav.hidden {
+        /* Links are always visible on tablet */
+        & .nav-item {
+            display: initial;
+        }
+    }
+    nav #nav-dropdown-btn {
+        /* Hide nav dropdown button on tablet/desktop */
+        display: none;
+    }
+
+    /* Text sizing */
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3.8rem;
+    }
+    h3 {
+        font-size: 2.2rem;
+    }
+    p,
+    li,
+    button,
+    label,
+    input,
+    textarea {
+        font-size: 1.6rem;
+    }
+    p.title-secondary {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Laptop */
+}

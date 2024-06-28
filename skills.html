@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/skills.css" />
+        <script src="js/script.js"></script>
+        <script src="js/skills.js" type="module"></script>
+        <script src="js/data/skills_data.js" type="module"></script>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <title>Ian Pinto | Software Engineer</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="hidden">
+                <!-- ul used for accessibility (screen readers) -->
+                <ul>
+                    <li id="nav-dropdown-btn">
+                        <a href="javascript:void(0);">&#9776;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html">.home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">.about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experience.html">.experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="skills.html">.skills</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="skills-title">
+                <div>
+                    <h1>me.<span>skills</span></h1>
+                    <p class="title-secondary">
+                        what I'm good at
+                    </p>
+                </div>
+                <img src="images/skills_title.jpg" alt="Cool scenery" />
+            </section>
+            <section id="what-i-can-do">
+                <h2>What I can do</h2>
+                <p>
+                    Click on a skill to see more info
+                </p>
+                <div id="skills-list">
+                    <!-- Populated in JS -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                © Ian Pinto 2024
+            </p>
+            <a href="https://www.linkedin.com/in/ian-pinto/" target="_blank">
+                <button class="blue-on-hover">
+                    <img src="images/linkedin_logo.png" alt="LinkedIn logo">
+                </button>
+            </a>
+            <a href="https://www.instagram.com/ipinto81/" target="_blank">
+                <button class="blue-on-hover">
+                    <img src="images/instagram_logo.png" alt="Instagram logo">
+                </button>
+            </a>
+        </footer>
+    </body>
+</html>

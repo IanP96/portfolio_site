@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/home.css" />
+        <script src="js/script.js" type="module"></script>
+        <script src="js/home.js" type="module"></script>
+        <script src="js/data/experience_data.js" type="module"></script>
+        <script src="js/data/skills_data.js" type="module"></script>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.png"
+            type="image/x-icon"
+        />
+        <title>Ian Pinto | Software Engineer</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="hidden">
+                <!-- ul used for accessibility (screen readers) -->
+                <ul>
+                    <li id="nav-dropdown-btn">
+                        <a href="javascript:void(0);">&#9776;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html">.home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html">.about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experience.html">.experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="skills.html">.skills</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home-title">
+                <div>
+                    <p class="title-secondary">Hi, I'm</p>
+                    <h1>Ian Pinto</h1>
+                    <p class="title-secondary" id="home-tagline">
+                        and I engineer software that will blow your mind.
+                    </p>
+                </div>
+                <img src="images/portrait_1.jpg" alt="Image of Ian Pinto" />
+            </section>
+
+            <section id="who-am-i">
+                <img src="images/person.png" alt="Person icon" />
+                <div>
+                    <h2>Who am I?</h2>
+                    <p>
+                        A budding software engineer and passionate programmer.
+                        From a young age, I've been amazed by the power of
+                        software to solve problems and create solutions. Now,
+                        I'm ready to use this passion to create some amazing
+                        things.
+                    </p>
+                </div>
+            </section>
+
+            <section id="what-ive-done">
+                <h2>What I've Done</h2>
+                <p>Scroll through – there's a lot in here!</p>
+                <div id="carousel">
+                    <button id="scroll-left" class="blue-on-hover">←</button>
+
+                    <div id="experience-list">
+                        <!-- Populated in JS -->
+                    </div>
+
+                    <button id="scroll-right" class="blue-on-hover">→</button>
+                </div>
+            </section>
+
+            <section id="my-skills">
+                <h2>My Skills</h2>
+                <ul id="skills-list">
+                    <!-- <li>Front-end web dev</li>
+                    <li>OOP (Python, Java)</li>
+                    <li>Databases (SQL)</li> -->
+                    <!-- Populated in JS -->
+                </ul>
+                <a href="skills.html">
+                    <button class="blue-on-hover">See more...</button>
+                </a>
+            </section>
+
+            <section id="get-in-touch">
+                <h2>Get in touch</h2>
+                <form id="get-in-touch-form" action="/">
+                    <label for="name">Your name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                        class="valid"
+                        required
+                    />
+                    <label for="email">Your email address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your email address"
+                        class="valid"
+                        required
+                    />
+                    <label for="message">Your message</label>
+                    <textarea
+                        name="message"
+                        id="message"
+                        placeholder="Type your message here..."
+                        class="valid"
+                        required
+                    ></textarea>
+                    <button id="send-button" class="blue-on-hover">Send</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>© Ian Pinto 2024</p>
+            <a href="https://www.linkedin.com/in/ian-pinto/" target="_blank">
+                <button class="blue-on-hover">
+                    <img src="images/linkedin_logo.png" alt="LinkedIn logo" />
+                </button>
+            </a>
+            <a href="https://www.instagram.com/ipinto81/" target="_blank">
+                <button class="blue-on-hover">
+                    <img src="images/instagram_logo.png" alt="Instagram logo" />
+                </button>
+            </a>
+        </footer>
+    </body>
+</html>

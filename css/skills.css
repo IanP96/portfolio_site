@@ -1,0 +1,32 @@
+@import url("style.css");
+
+/* div of all skills */
+#what-i-can-do > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* div of individual skills */
+#what-i-can-do > div > div {
+
+    margin: 1rem;
+    padding: 2rem;
+    flex-basis: 0 0 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#what-i-can-do > div > div.desc-hidden > p {
+    /* Hide description */
+    display: none;
+}
+
+#what-i-can-do > div > div.desc-visible > p {
+    /* Show description */
+    display: auto;
+}

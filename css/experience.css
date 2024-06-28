@@ -1,0 +1,14 @@
+@import url('style.css');
+
+#what-ive-done-experience-list button.disabled {
+    background-color: var(--light-grey);
+    color: black;
+}
+
+#what-ive-done-experience-list button.selected {
+    border: 2px solid white;
+}
+
+#experience > div {
+    margin-top: 2rem;
+}
