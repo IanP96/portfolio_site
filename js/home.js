@@ -22,11 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollLeftBtn = document.getElementById("scroll-left");
     const scrollRightBtn = document.getElementById("scroll-right");
     const experienceList = document.getElementById("experience-list");
-    // Form elements
-    const nameField = document.getElementById("name");
-    const emailField = document.getElementById("email");
-    const messageField = document.getElementById("message");
-    const button = document.getElementById("send-button");
     // Skills
     const skillsList = document.getElementById("skills-list");
 
@@ -54,34 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
         experienceDiv.appendChild(desc);
         experienceList.appendChild(experienceDiv);
     });
-
-    // JavaScript interaction #2: form validation
-
-    /**
-     * Validates an email address. Sourced from [2]
-     * @param {String} email The email to validate.
-     * @returns Whether the email is valid.
-     */
-    function validateEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
-
-    /**
-     * Called when the form is submitted.
-     */
-    function submitForm() {
-        if (validateEmail(emailField.value)) {
-            // Valid email
-            alert(`Thank you for your message, ${nameField.value}!`);
-        } else {
-            // Invalid email
-            alert("Please enter a valid email address.");
-            return true;
-        }
-    }
-
-    button.addEventListener("click", submitForm)
 
     // Randomise home tagline
     homeTagline.innerHTML = homeTaglines[randomInt(homeTaglines.length)];
