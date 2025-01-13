@@ -1,3 +1,3 @@
-# My personal portfolio site
+# My portfolio site
 
-Made using HTML/CSS and some JavaScript.
+My personal portfolio site, made using HTML/CSS and some JavaScript.
